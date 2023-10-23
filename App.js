@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {Alert, Modal, StyleSheet, Text, Pressable, View, Image, TextInput, TouchableHighlight, Button} from 'react-native';
+import React, { useState } from 'react';
+import { Alert, Modal, StyleSheet, Text, Pressable, View, Image, TextInput, TouchableHighlight, Button } from 'react-native';
 
-  const App = () => {
+const App = () => {
   const [F, setF] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
   const [numero, setNumero] = useState(0);
-  
+
 
   fatorial = (numero) => {
     var n = numero.numero;
@@ -33,16 +33,16 @@ import {Alert, Modal, StyleSheet, Text, Pressable, View, Image, TextInput, Touch
             <Image
               source={require('./assets/alert.png')} />
             <TextInput
-       style={styles.inputTypeDesign}
-        placeholder="Informe n"
-        onChangeText={numero => setNumero(numero)}
-        keyboardType="numeric"
-      />
+              style={styles.inputTypeDesign}
+              placeholder="Informe n"
+              onChangeText={numero => setNumero(numero)}
+              keyboardType="numeric"
+            />
             <TouchableHighlight
               style={styles.botao}>
               <Button
                 title="CALCULAR"
-                onPress={() => fatorial({numero})} />
+                onPress={() => fatorial({ numero })} />
             </TouchableHighlight>
             <Text
               style={styles.entrada}>
@@ -50,7 +50,7 @@ import {Alert, Modal, StyleSheet, Text, Pressable, View, Image, TextInput, Touch
             </Text>
             <Pressable
               style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!{modalVisible})}
+              onPress={() => setModalVisible(!{ modalVisible })}
             >
               <Text>
                 Sair
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
-    
+
   },
   modalText: {
     marginBottom: 15,
